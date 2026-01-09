@@ -30,6 +30,7 @@ export async function GET() {
             },
             featured: p.featured,
             featuredOrder: p.featuredOrder,
+            inStock: p.inStock,
             createdAt: p.createdAt.toISOString().split('T')[0],
         }));
 
@@ -66,6 +67,7 @@ export async function POST(request) {
                 images: data.images || [],
                 featured: data.featured || false,
                 featuredOrder: data.featuredOrder || 0,
+                inStock: data.inStock !== undefined ? data.inStock : true,
             },
         });
 
@@ -103,6 +105,7 @@ export async function PUT(request) {
                 images: data.images || [],
                 featured: data.featured || false,
                 featuredOrder: data.featuredOrder || 0,
+                inStock: data.inStock !== undefined ? data.inStock : true,
             },
         });
 

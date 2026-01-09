@@ -904,6 +904,13 @@ p {
   font-weight: 600;
   border-radius: var(--radius-sm);
   text-transform: uppercase;
+  z-index: 2;
+}
+
+.product-card-badge-outofstock {
+  left: auto;
+  right: var(--space-md);
+  background: #dc2626;
 }
 
 .product-card-content {

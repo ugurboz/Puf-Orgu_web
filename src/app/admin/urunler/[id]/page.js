@@ -25,6 +25,7 @@ export default function AdminProductEditPage() {
         dimensions: '',
         colors: '',
         featured: false,
+        inStock: true,
         images: [],
     });
 
@@ -68,6 +69,7 @@ export default function AdminProductEditPage() {
                     dimensions: product.specifications?.dimensions || '',
                     colors: product.specifications?.colors?.join(', ') || '',
                     featured: product.featured || false,
+                    inStock: product.inStock !== undefined ? product.inStock : true,
                     images: product.images || [],
                 });
             }
@@ -177,6 +179,7 @@ export default function AdminProductEditPage() {
                         .filter(Boolean),
                 },
                 featured: formData.featured,
+                inStock: formData.inStock,
                 images: formData.images,
             };
 
@@ -384,6 +387,16 @@ export default function AdminProductEditPage() {
                                     onChange={handleChange}
                                 />
                                 <label htmlFor="featured">Öne Çıkan Ürün</label>
+                            </div>
+                            <div className="form-checkbox" style={{ height: '48px', display: 'flex', alignItems: 'center', marginLeft: '24px' }}>
+                                <input
+                                    type="checkbox"
+                                    id="inStock"
+                                    name="inStock"
+                                    checked={formData.inStock}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor="inStock">Stokta Var</label>
                             </div>
                         </div>
                     </div>
