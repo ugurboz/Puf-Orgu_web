@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Klasik Örgü Bere",
+      "slug": "klasik-orgu-bere",
+      "description": "El örgüsü pamuk ipten yapılmış, sıcak tutan şık bere.",
+      "longDescription": "Tamamen el yapımı bu bere, özenle seçilmiş %100 pamuk iplerden örülmüştür. Yumuşak dokusu ve rahat kalıbı ile hem sıcak tutar hem de şık görünmenizi sağlar. Kış aylarının vazgeçilmez parçası olacak.",
+      "category": "bereler",
+      "images": [
+        "/uploads/bere-1.jpg"
+      ],
+      "specifications": {
+        "material": "Pamuk ip",
+        "dimensions": "Standart yetişkin bedeni",
+        "colors": [
+          "Bej",
+          "Krem",
+          "Beyaz"
+        ]
+      },
+      "featured": true,
+      "featuredOrder": 2,
+      "createdAt": "2024-01-09"
+    },
+    {
+      "id": "2",
+      "name": "Ponponlu Bere",
+      "slug": "ponponlu-bere",
+      "description": "Ponponlu sevimli el örgüsü bere.",
+      "longDescription": "Bu el yapımı ponponlu bere, hem şık hem de eğlenceli bir görünüm sunar. Yumuşak ve sıcak tutan yapısıyla soğuk günlerin favorisi olacak.",
+      "category": "bereler",
+      "images": [
+        "/uploads/bere-2.jpg"
+      ],
+      "specifications": {
+        "material": "Yün karışımı ip",
+        "dimensions": "Standart yetişkin bedeni",
+        "colors": [
+          "Gri",
+          "Pembe",
+          "Mavi"
+        ]
+      },
+      "featured": true,
+      "featuredOrder": 1,
+      "createdAt": "2024-01-08"
+    },
+    {
+      "id": "3",
+      "name": "Düz Örgü Yelek",
+      "slug": "duz-orgu-yelek",
+      "description": "Klasik düz örgü el yapımı yelek.",
+      "longDescription": "Zarif ve şık bu el örgüsü yelek, hem günlük kullanım hem de özel günler için idealdir. %100 doğal iplerden özenle örülmüştür.",
+      "category": "yelekler",
+      "images": [
+        "/uploads/yelek-1.jpg"
+      ],
+      "specifications": {
+        "material": "Pamuk ip",
+        "dimensions": "S, M, L, XL",
+        "colors": [
+          "Krem",
+          "Bej",
+          "Kahve"
+        ]
+      },
+      "featured": true,
+      "featuredOrder": 3,
+      "createdAt": "2024-01-07"
+    },
+    {
+      "id": "4",
+      "name": "V Yaka Yelek",
+      "slug": "v-yaka-yelek",
+      "description": "Şık V yaka tasarımlı el örgüsü yelek.",
+      "longDescription": "Modern V yaka tasarımıyla dikkat çeken bu yelek, el yapımı olarak özenle üretilmiştir. Gömlek üzerine veya tek başına giyilebilir.",
+      "category": "yelekler",
+      "images": [
+        "/uploads/yelek-2.jpg"
+      ],
+      "specifications": {
+        "material": "Yün karışımı",
+        "dimensions": "S, M, L, XL",
+        "colors": [
+          "Lacivert",
+          "Bordo",
+          "Yeşil"
+        ]
+      },
+      "featured": true,
+      "featuredOrder": 4,
+      "createdAt": "2024-01-06"
+    },
+    {
+      "id": "5",
+      "name": "Örgü Atkı-Bere Seti",
+      "slug": "orgu-atki-bere-seti",
+      "description": "El örgüsü uyumlu atkı ve bere seti.",
+      "longDescription": "Bu şık set, el örgüsü bere ve uyumlu atkıdan oluşmaktadır. Hediye olarak da idealdir. Yumuşak ve sıcak tutan doğal iplerden üretilmiştir.",
+      "category": "aksesuarlar",
+      "images": [
+        "/uploads/set-1.jpg"
+      ],
+      "specifications": {
+        "material": "Pamuk ip",
+        "dimensions": "Standart beden",
+        "colors": [
+          "Karışık pastel tonlar"
+        ]
+      },
+      "featured": false,
+      "featuredOrder": 0,
+      "createdAt": "2024-01-05"
+    },
+    {
+      "id": "6",
+      "name": "El Örgüsü Eldiven",
+      "slug": "el-orgusu-eldiven",
+      "description": "Parmaksız el örgüsü eldiven.",
+      "longDescription": "Parmaksız tasarımıyla hem sıcak tutar hem de telefon kullanımına izin verir. El yapımı olarak özenle örülmüştür.",
+      "category": "aksesuarlar",
+      "images": [
+        "/uploads/eldiven-1.jpg"
+      ],
+      "specifications": {
+        "material": "Yün karışımı ip",
+        "dimensions": "Standart beden",
+        "colors": [
+          "Gri",
+          "Bej",
+          "Siyah"
+        ]
+      },
+      "featured": false,
+      "featuredOrder": 0,
+      "createdAt": "2024-01-04"
+    },
+    {
+      "name": "deneme puf",
+      "slug": "deneme-puf",
+      "description": "denemedirrrrrr",
+      "longDescription": "",
+      "category": "puflar",
+      "specifications": {
+        "material": "pamuk",
+        "dimensions": "30x30",
+        "colors": [
+          "beyaz"
+        ]
+      },
+      "featured": true,
+      "id": "1767971094587",
+      "images": [],
+      "createdAt": "2026-01-09"
+    }
+  ]
+}

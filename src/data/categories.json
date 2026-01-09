@@ -1,0 +1,22 @@
+{
+    "categories": [
+        {
+            "id": "bereler",
+            "name": "Bereler",
+            "slug": "bereler",
+            "description": "El örgüsü bereler"
+        },
+        {
+            "id": "yelekler",
+            "name": "Yelekler",
+            "slug": "yelekler",
+            "description": "El örgüsü yelekler"
+        },
+        {
+            "id": "aksesuarlar",
+            "name": "Aksesuarlar",
+            "slug": "aksesuarlar",
+            "description": "Örgü aksesuarlar ve diğer ürünler"
+        }
+    ]
+}
