@@ -464,11 +464,12 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-cream);
+  background: #FAF7F2;
   padding: var(--space-xl);
   flex-direction: column;
   gap: var(--space-lg);
-  z-index: 999;
+  z-index: 1001;
+  overflow-y: auto;
 }
 
 .mobile-nav.open {
