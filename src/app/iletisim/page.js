@@ -72,8 +72,8 @@ export default function ContactPage() {
                                 <div className="contact-info-text">
                                     <h3>Instagram</h3>
                                     <p>
-                                        <a href="https://instagram.com/puforgu" target="_blank" rel="noopener noreferrer">
-                                            @puforgu
+                                        <a href="https://www.instagram.com/puf_orgu?igsh=enBjYXowYmpxc2Zn" target="_blank" rel="noopener noreferrer">
+                                            @puf_orgu
                                         </a>
                                     </p>
                                 </div>

@@ -19,12 +19,15 @@ export default function ProductCard({ product }) {
                     {product.featured && (
                         <span className="product-card-badge">Öne Çıkan</span>
                     )}
+                    {product.inStock === false && (
+                        <span className="product-card-badge product-card-badge-outofstock">Stokta Yok</span>
+                    )}
                     {hasImage ? (
                         <Image
                             src={product.images[0]}
                             alt={product.name}
                             fill
-                            style={{ objectFit: 'cover' }}
+                            style={{ objectFit: 'cover', filter: product.inStock === false ? 'grayscale(50%)' : 'none' }}
                         />
                     ) : (
                         <div
@@ -36,6 +39,7 @@ export default function ProductCard({ product }) {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 fontSize: '64px',
+                                filter: product.inStock === false ? 'grayscale(50%)' : 'none',
                             }}
                         >
                             {categoryEmojis[product.category] || '🧶'}
@@ -50,6 +54,12 @@ export default function ProductCard({ product }) {
                     <h3 className="product-card-title">{product.name}</h3>
                 </Link>
                 <p className="product-card-desc">{product.description}</p>
+
+                {product.price !== undefined && (
+                    <div className="product-card-price">
+                        ₺{Number(product.price).toLocaleString('tr-TR')}
+                    </div>
+                )}
 
                 {product.specifications && (
                     <div className="product-card-meta">

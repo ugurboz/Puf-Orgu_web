@@ -208,6 +208,7 @@ export default function AdminProductsPage() {
                                     <tr>
                                         <th>Görsel</th>
                                         <th>Ürün Adı</th>
+                                        <th>Fiyat</th>
                                         <th>Kategori</th>
                                         <th>Öne Çıkan</th>
                                         <th>İşlemler</th>
@@ -216,7 +217,7 @@ export default function AdminProductsPage() {
                                 <tbody>
                                     {products.map((product) => (
                                         <tr key={product.id}>
-                                            <td>
+                                            <td data-label="Görsel">
                                                 <div
                                                     style={{
                                                         width: '60px',
@@ -243,15 +244,18 @@ export default function AdminProductsPage() {
                                                     )}
                                                 </div>
                                             </td>
-                                            <td>
+                                            <td data-label="Ürün Adı">
                                                 <strong>{product.name}</strong>
                                                 <br />
                                                 <small style={{ color: 'var(--color-text-muted)' }}>
                                                     {product.description?.substring(0, 50)}...
                                                 </small>
                                             </td>
-                                            <td style={{ textTransform: 'capitalize' }}>{product.category}</td>
-                                            <td>
+                                            <td data-label="Fiyat">
+                                                {product.price !== undefined ? `₺${Number(product.price).toLocaleString('tr-TR')}` : '—'}
+                                            </td>
+                                            <td data-label="Kategori" style={{ textTransform: 'capitalize' }}>{product.category}</td>
+                                            <td data-label="Öne Çıkan">
                                                 <button
                                                     onClick={() => handleToggleFeatured(product)}
                                                     style={{
@@ -267,7 +271,7 @@ export default function AdminProductsPage() {
                                                     {product.featured ? '✓ Öne Çıkan' : 'Ekle'}
                                                 </button>
                                             </td>
-                                            <td>
+                                            <td data-label="İşlemler">
                                                 <div className="admin-table-actions">
                                                     <Link
                                                         href={`/admin/urunler/${product.id}`}
@@ -329,7 +333,7 @@ export default function AdminProductsPage() {
                                     <tbody>
                                         {featuredProducts.map((product, index) => (
                                             <tr key={product.id}>
-                                                <td>
+                                                <td data-label="Sıra">
                                                     <span style={{
                                                         display: 'inline-flex',
                                                         alignItems: 'center',
@@ -344,7 +348,7 @@ export default function AdminProductsPage() {
                                                         {index + 1}
                                                     </span>
                                                 </td>
-                                                <td>
+                                                <td data-label="Görsel">
                                                     <div
                                                         style={{
                                                             width: '50px',
@@ -371,11 +375,11 @@ export default function AdminProductsPage() {
                                                         )}
                                                     </div>
                                                 </td>
-                                                <td>
+                                                <td data-label="Ürün Adı">
                                                     <strong>{product.name}</strong>
                                                 </td>
-                                                <td style={{ textTransform: 'capitalize' }}>{product.category}</td>
-                                                <td>
+                                                <td data-label="Kategori" style={{ textTransform: 'capitalize' }}>{product.category}</td>
+                                                <td data-label="Sıralama">
                                                     <div style={{ display: 'flex', gap: '4px' }}>
                                                         <button
                                                             onClick={() => handleMoveUp(product)}
@@ -409,14 +413,16 @@ export default function AdminProductsPage() {
                                                         </button>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <button
-                                                        onClick={() => handleToggleFeatured(product)}
-                                                        className="btn admin-btn-sm"
-                                                        style={{ background: '#fee2e2', color: '#dc2626' }}
-                                                    >
-                                                        Kaldır
-                                                    </button>
+                                                <td data-label="İşlemler">
+                                                    <div className="admin-table-actions">
+                                                        <button
+                                                            onClick={() => handleToggleFeatured(product)}
+                                                            className="btn admin-btn-sm"
+                                                            style={{ background: '#fee2e2', color: '#dc2626' }}
+                                                        >
+                                                            Kaldır
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         ))}

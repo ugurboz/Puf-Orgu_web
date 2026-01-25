@@ -18,6 +18,7 @@ async function getFeaturedProducts() {
     name: p.name,
     slug: p.slug,
     description: p.description,
+    price: p.price,
     category: p.category.slug,
     categoryName: p.category.name,
     images: p.images,

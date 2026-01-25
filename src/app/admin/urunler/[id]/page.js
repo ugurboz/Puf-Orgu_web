@@ -20,11 +20,13 @@ export default function AdminProductEditPage() {
         slug: '',
         description: '',
         longDescription: '',
+        price: '',
         category: 'bereler',
         material: '',
         dimensions: '',
         colors: '',
         featured: false,
+        inStock: true,
         images: [],
     });
 
@@ -63,11 +65,13 @@ export default function AdminProductEditPage() {
                     slug: product.slug || '',
                     description: product.description || '',
                     longDescription: product.longDescription || '',
+                    price: product.price !== undefined ? product.price : '',
                     category: product.category || 'bereler',
                     material: product.specifications?.material || '',
                     dimensions: product.specifications?.dimensions || '',
                     colors: product.specifications?.colors?.join(', ') || '',
                     featured: product.featured || false,
+                    inStock: product.inStock !== undefined ? product.inStock : true,
                     images: product.images || [],
                 });
             }
@@ -167,6 +171,7 @@ export default function AdminProductEditPage() {
                 slug: formData.slug,
                 description: formData.description,
                 longDescription: formData.longDescription,
+                price: formData.price !== '' ? Number(formData.price) : 0,
                 category: formData.category,
                 specifications: {
                     material: formData.material,
@@ -177,6 +182,7 @@ export default function AdminProductEditPage() {
                         .filter(Boolean),
                 },
                 featured: formData.featured,
+                inStock: formData.inStock,
                 images: formData.images,
             };
 
@@ -385,7 +391,34 @@ export default function AdminProductEditPage() {
                                 />
                                 <label htmlFor="featured">Öne Çıkan Ürün</label>
                             </div>
+                            <div className="form-checkbox" style={{ height: '48px', display: 'flex', alignItems: 'center', marginLeft: '24px' }}>
+                                <input
+                                    type="checkbox"
+                                    id="inStock"
+                                    name="inStock"
+                                    checked={formData.inStock}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor="inStock">Stokta Var</label>
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label" htmlFor="price">
+                            Fiyat (₺)
+                        </label>
+                        <input
+                            type="number"
+                            id="price"
+                            name="price"
+                            step="0.01"
+                            className="form-input"
+                            value={formData.price}
+                            onChange={handleChange}
+                            placeholder="Örn: 499"
+                            required
+                        />
                     </div>
 
                     <div className="form-group">

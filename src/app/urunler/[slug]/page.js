@@ -226,6 +226,16 @@ export default function ProductDetailPage({ params }) {
                     <div className="product-info">
                         <span className="product-category">{product.categoryName || product.category}</span>
                         <h1>{product.name}</h1>
+                        {product.price !== undefined && (
+                            <div style={{
+                                fontSize: '22px',
+                                fontWeight: 700,
+                                color: 'var(--color-brown-dark)',
+                                marginBottom: '16px'
+                            }}>
+                                ₺{Number(product.price).toLocaleString('tr-TR')}
+                            </div>
+                        )}
                         <p className="product-description">
                             {product.longDescription || product.description}
                         </p>

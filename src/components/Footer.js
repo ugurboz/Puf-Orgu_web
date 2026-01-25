@@ -69,7 +69,7 @@ export default function Footer() {
                     <p>© {currentYear} Puf Örgü. Tüm hakları saklıdır.</p>
                     <div className="social-links">
                         <a
-                            href="https://instagram.com/puforgu"
+                            href="https://www.instagram.com/puf_orgu?igsh=enBjYXowYmpxc2Zn"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
